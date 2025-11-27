@@ -31,6 +31,9 @@ print(f"----- Downloading {TICKER} Data -----")
 df = yf.download(TICKER, start=START_DATE, end=END_DATE, interval="1d")
 
 # %%
+df.to_csv("shell_stock_data.csv",index=False)
+
+# %%
 df
 
 # %%
